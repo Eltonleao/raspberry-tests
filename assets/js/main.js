@@ -3,9 +3,10 @@ $(document).ready(function () {
 
     $.ajax({
         method: "GET",
-        url: "http://200.141.127.130:210/projetos/lorem-api/FRAMEWORK/test",
+        url: "http://200.141.127.130:210/projetos/lorem-api/test",
     })
-        .done(function (data) {
-            console.log(data);
-        });
+    .done(function (data) {
+        data = JSON.parse(data);
+        console.log(data);
+    });
 })
