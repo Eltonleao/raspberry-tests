@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     $.ajax({
         method: "GET",
-        url: "http://200.141.127.130:210/projetos/lorem-api/test",
+        url: "https://200.141.127.130:443/projetos/lorem-api/test",
     })
     .done(function (data) {
         data = JSON.parse(data);
