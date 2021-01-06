@@ -1,5 +1,6 @@
 $(document).ready(function () {
     console.log('is running');
+    $("#content").html('Carregando...')
 
     $.ajax({
         method: "GET",
@@ -7,6 +8,9 @@ $(document).ready(function () {
     })
     .done(function (data) {
         data = JSON.parse(data);
-        console.log(data);
+        data = data.result;
+        $("#content").html(data.msg)
+        
+
     });
 })
